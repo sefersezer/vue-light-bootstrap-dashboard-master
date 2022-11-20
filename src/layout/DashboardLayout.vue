@@ -54,6 +54,10 @@
           <i class="nc-icon nc-settings-90"></i>
           <p>Tech Background</p>
         </sidebar-link>
+        <sidebar-link to="/experiences">
+          <i class="nc-icon nc-paper-2"></i>
+          <p>Experiences</p>
+        </sidebar-link>
         <sidebar-link class="active" to="/admin/upgrade">
           <i class="nc-icon nc-alien-33"></i>
           <p>Upgrade to PRO</p>

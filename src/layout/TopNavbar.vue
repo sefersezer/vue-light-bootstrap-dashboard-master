@@ -30,7 +30,7 @@
           </base-dropdown>
           -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#/search-result" class="nav-link">
               <i class="nc-icon nc-zoom-split"></i>
               <span class="d-lg-block">&nbsp;Search</span>
             </a>

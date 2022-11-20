@@ -5,8 +5,8 @@
         <div class="col-12">
           <card>
             <template slot="header">
-              <h4 class="card-title">Time Definitions</h4>
-              <p class="card-category">Time definitions for learning grammar.</p>
+              <h4 class="card-title">Experiences</h4>
+              <p class="card-category">Companies which I worked</p>
             </template>
             <div class="typo-line">
               <h6>

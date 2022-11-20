@@ -10,6 +10,7 @@ import TimeDefinitions from 'src/pages/TimeDefinitions.vue'
 import WhoAmI from 'src/pages/WhoAmI.vue'
 import TechnicalBackground from 'src/pages/TechnicalBackground.vue'
 import Experiences from 'src/pages/Experiences.vue'
+import SearchResult from 'src/pages/SearchResult.vue'
 
 import UserProfile from 'src/pages/UserProfile.vue'
 import TableList from 'src/pages/TableList.vue'
@@ -55,6 +56,11 @@ const routes = [
         path: 'experiences',
         name: 'Experiences',
         component: Experiences
+      },
+      {
+        path: 'search-result',
+        name: 'SearchResult',
+        component: SearchResult
       }
 
     ]

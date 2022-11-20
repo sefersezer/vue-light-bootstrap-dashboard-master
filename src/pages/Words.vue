@@ -16,6 +16,54 @@
                     <p>This is a word</p>
                   </div>
                 </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                  <div class="font-icon-detail">
+                    <i class="nc-icon nc-air-baloon"></i>
+                    <p>This is a word</p>
+                  </div>
+                </div>
               </div>
             </div>
           </card>
