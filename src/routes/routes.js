@@ -3,30 +3,71 @@ import DashboardLayout from '../layout/DashboardLayout.vue'
 import NotFound from '../pages/NotFoundPage.vue'
 
 // Admin pages
+import OverviewOld from 'src/pages/OverviewOld.vue'
 import Overview from 'src/pages/Overview.vue'
+import Words from 'src/pages/Words.vue'
+import TimeDefinitions from 'src/pages/TimeDefinitions.vue'
+import WhoAmI from 'src/pages/WhoAmI.vue'
+import TechnicalBackground from 'src/pages/TechnicalBackground.vue'
+import Experiences from 'src/pages/Experiences.vue'
+
 import UserProfile from 'src/pages/UserProfile.vue'
 import TableList from 'src/pages/TableList.vue'
 import Typography from 'src/pages/Typography.vue'
 import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
+
 import Upgrade from 'src/pages/Upgrade.vue'
 
 const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/admin/overview'
-  },
-  {
-    path: '/admin',
-    component: DashboardLayout,
-    redirect: '/admin/overview',
+    redirect: '/overview',
     children: [
       {
         path: 'overview',
         name: 'Overview',
         component: Overview
+      },
+      {
+        path: 'words',
+        name: 'Words',
+        component: Words
+      },
+      {
+        path: 'time-definitions',
+        name: 'Time Definitions',
+        component: TimeDefinitions
+      },
+      {
+        path: 'who-am-i',
+        name: 'Who am I?',
+        component: WhoAmI
+      },
+      {
+        path: 'technical-background',
+        name: 'Technical Background',
+        component: TechnicalBackground
+      },
+      {
+        path: 'experiences',
+        name: 'Experiences',
+        component: Experiences
+      }
+
+    ]
+  },
+  {
+    path: '/admin',
+    component: DashboardLayout,
+    redirect: '/admin/overview-old',
+    children: [
+      {
+        path: 'overview-old',
+        name: 'Overview Old',
+        component: OverviewOld
       },
       {
         path: 'user',

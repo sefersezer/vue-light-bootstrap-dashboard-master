@@ -1,6 +1,6 @@
 <template>
   <card>
-    <h4 slot="header" class="card-title">Edit Profile</h4>
+    <h4 slot="header" class="card-title">Todo: change the country </h4>
     <form>
       <div class="row">
         <div class="col-md-5">
@@ -108,16 +108,16 @@
     data () {
       return {
         user: {
-          company: 'Light dashboard',
-          username: 'michael23',
-          email: '',
-          firstName: 'Mike',
-          lastName: 'Andrew',
-          address: 'Melbourne, Australia',
-          city: 'melbourne',
-          country: 'Australia',
+          company: 'Integrated Finance',
+          username: 'sefer_sezer',
+          email: 'I can find you.',
+          firstName: 'Sefer',
+          lastName: 'SEZER',
+          address: 'Wish to live in The Hague, Netherlands 🏠',
+          city: 'Istanbul',
+          country: 'Türkiye for now',
           postalCode: '',
-          aboutMe: `Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.`
+          aboutMe: `Bad choices makes good stories`
         }
       }
     },

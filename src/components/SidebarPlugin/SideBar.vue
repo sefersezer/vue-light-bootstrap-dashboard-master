@@ -5,10 +5,9 @@
        :data-image="backgroundImage">
     <div class="sidebar-wrapper">
       <div class="logo">
-        inanmam
         <a href="#" class="simple-text logo__container">
             <div class="logo-img">
-                <img src="img/vue-logo.png" alt="">
+                <div class="nc-icon nc-spaceship"></div>
             </div>
           {{title}}
         </a>
@@ -44,7 +43,7 @@
     props: {
       title: {
         type: String,
-        default: 'Vue LBD'
+        default: 'Sefer Sezer'
       },
       backgroundColor: {
         type: String,

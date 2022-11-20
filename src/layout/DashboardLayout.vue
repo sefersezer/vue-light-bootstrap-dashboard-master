@@ -2,7 +2,21 @@
   <div class="wrapper">
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/admin/overview">
+      <sidebar-link to="/overview">
+        <i class="nc-icon nc-tap-01"></i>
+        <p>Overview</p>
+      </sidebar-link>
+      <sidebar-link to="/words">
+        <i class="nc-icon nc-caps-small"></i>
+        <p>Words</p>
+      </sidebar-link>
+      <sidebar-link to="/time-definitions">
+        <i class="nc-icon nc-time-alarm"></i>
+        <p>Time Definitions</p>
+      </sidebar-link>
+
+
+      <sidebar-link to="/admin/overview-old">
         <i class="nc-icon nc-chart-pie-35"></i>
         <p>Dashboard</p>
       </sidebar-link>
@@ -32,11 +46,19 @@
       </sidebar-link>
 
       <template slot="bottom-links">
-        <sidebar-link class="active"
-                      to="/admin/upgrade">
+        <sidebar-link to="/who-am-i">
+          <i class="nc-icon nc-satisfied"></i>
+          <p>Who am I?</p>
+        </sidebar-link>
+        <sidebar-link to="/technical-background">
+          <i class="nc-icon nc-settings-90"></i>
+          <p>Tech Background</p>
+        </sidebar-link>
+        <sidebar-link class="active" to="/admin/upgrade">
           <i class="nc-icon nc-alien-33"></i>
           <p>Upgrade to PRO</p>
         </sidebar-link>
+
       </template>
     </side-bar>
     <div class="main-panel">
@@ -54,24 +76,24 @@
 
 </style>
 <script>
-  import TopNavbar from './TopNavbar.vue'
-  import ContentFooter from './ContentFooter.vue'
-  import DashboardContent from './Content.vue'
-  import MobileMenu from './MobileMenu.vue'
-  export default {
-    components: {
-      TopNavbar,
-      ContentFooter,
-      DashboardContent,
-      MobileMenu
-    },
-    methods: {
-      toggleSidebar () {
-        if (this.$sidebar.showSidebar) {
-          this.$sidebar.displaySidebar(false)
-        }
+import TopNavbar from './TopNavbar.vue'
+import ContentFooter from './ContentFooter.vue'
+import DashboardContent from './Content.vue'
+import MobileMenu from './MobileMenu.vue'
+export default {
+  components: {
+    TopNavbar,
+    ContentFooter,
+    DashboardContent,
+    MobileMenu
+  },
+  methods: {
+    toggleSidebar() {
+      if (this.$sidebar.showSidebar) {
+        this.$sidebar.displaySidebar(false)
       }
     }
   }
+}
 
 </script>
