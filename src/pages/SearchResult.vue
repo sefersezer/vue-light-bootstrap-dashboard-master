@@ -13,7 +13,7 @@
                 <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
                   <div class="font-icon-detail">
                     <i class="nc-icon nc-air-baloon"></i>
-                    <p>Story</p>
+                    <h3>Story</h3>
                   </div>
                 </div>
 
@@ -23,17 +23,17 @@
               <div class="col-12">
                 <card>
                   <h3>
-                    <i class="nc-icon nc-puzzle-10"></i>&nbsp;<small>Phrases :</small><br>
+                    <i class="nc-icon nc-puzzle-10" style="font-size: large;"></i>&nbsp;<small>Phrases :</small><br>
                     Make a story
                     <p>&nbsp;</p>
                   </h3>
                   <h3>
-                    <i class="nc-icon nc-chat-round"></i>&nbsp;<small>Saying :</small><br>
+                    <i class="nc-icon nc-chat-round" style="font-size: large;"></i>&nbsp;<small>Saying :</small><br>
                     There is no story that never happened before in the world
                     <p>&nbsp;</p>
                   </h3>
                   <h3>
-                    <i class="nc-icon nc-light-3"></i>&nbsp;<small>Idioms :</small><br>
+                    <i class="nc-icon nc-light-3" style="font-size: large;"></i>&nbsp;<small>Idioms :</small><br>
                     Bad choices makes good stories
                     <p>&nbsp;</p>
                   </h3>
@@ -60,10 +60,17 @@ import Card from 'src/components/Cards/Card.vue'
 export default {
   components: {
     Card
+  },
+  props: {
+    word: Object
+  },
+  created: function () {
+    console.log('the word is: ' + this.word);
   }
 }
 
 </script>
+
 <style>
 
 </style>

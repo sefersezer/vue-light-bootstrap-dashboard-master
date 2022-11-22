@@ -10,58 +10,10 @@
             </template>
             <div class="all-icons">
               <div class="row">
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6" v-for="word in words">
                   <div class="font-icon-detail">
                     <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
-                  </div>
-                </div>
-                <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
-                  <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <p>This is a word</p>
+                    <h4 :word="word">{{ word.content }}</h4>
                   </div>
                 </div>
               </div>
@@ -75,12 +27,25 @@
 </template>
 <script>
 import Card from 'src/components/Cards/Card.vue'
+import StaticData from 'src/components/Data/StaticData.vue';
+import SearchResult from './SearchResult.vue';
 
 export default {
   components: {
-    Card
+    Card,
+    StaticData,
+    SearchResult
+  },
+  created() {
+    this.words = StaticData.words;
+  },
+  data() {
+    return {
+      words: null
+    }
   }
 }
+
 
 </script>
 <style>

@@ -9,7 +9,9 @@
             </div>
             <div slot="content">
               <p class="card-category">Word Count</p>
-              <h4 class="card-title">{{ wordCount }}</h4>
+              <h4 class="card-title">
+                {{ getWordsCount }}
+              </h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>They are new for me
@@ -63,8 +65,6 @@
         </div>
 
       </div>
-
-
       <div class="row">
         <div class="col-md-6">
           <chart-card :chart-data="barChartDefaults.data" :chart-options="barChartDefaults.options"
@@ -93,15 +93,20 @@
 <script>
 import ChartCard from 'src/components/Cards/ChartCard.vue'
 import StatsCard from 'src/components/Cards/StatsCard.vue'
+import StaticData from 'src/components/Data/StaticData.vue'
 
 export default {
   components: {
     ChartCard,
-    StatsCard
+    StatsCard,
+    StaticData
+  },
+  created() {
+    this.words = StaticData.words;
   },
   data() {
     return {
-
+      words: null,
       barChartDefaults: {
         data: {
           labels: ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'unknown'],
@@ -128,31 +133,13 @@ export default {
             }
           }]
         ]
-      },
-
-      words: [
-        { id: 1, content: "contentment", metaData: { level: "A2", origin: "english" } },
-        { id: 2, content: "indulgence", metaData: { level: "A2", origin: "english" } },
-        { id: 3, content: "gracefully", metaData: { level: "A2", origin: "french" } },
-        { id: 4, content: "resilient", metaData: { level: "A2", origin: "english" } },
-        { id: 5, content: "utterly", metaData: { level: "C2", origin: "danish" } },
-        { id: 6, content: "all-rounders", metaData: { level: "A2", origin: "english" } },
-        { id: 7, content: "vacate", metaData: { level: "A2", origin: "english" } },
-        { id: 8, content: "evacuate", metaData: { level: "A2", origin: "english" } },
-        { id: 9, content: "curfew", metaData: { level: "A2", origin: "french" } },
-        { id: 10, content: "allowance", metaData: { level: "A2", origin: "english" } },
-        { id: 11, content: "chores", metaData: { level: "A2", origin: "danish" } },
-        { id: 12, content: "leisurely", metaData: { level: "A2", origin: "french" } },
-        { id: 13, content: "shrink", metaData: { level: "A2", origin: "french" } },
-        { id: 14, content: "hectic", metaData: { level: "C1", origin: "french" } }
-      ]
+      }
     }
   },
   computed: {
-    wordCount() {
+    getWordsCount() {
       return this.words.length;
     }
-
   }
 }
 </script>
