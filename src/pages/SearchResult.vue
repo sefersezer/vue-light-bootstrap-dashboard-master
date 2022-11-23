@@ -2,7 +2,7 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12" v-if="selectedWord">
           <card>
             <template slot="header">
               <h4 class="card-title">&nbsp;</h4>
@@ -12,8 +12,8 @@
               <div class="row" style="justify-content: center;">
                 <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6">
                   <div class="font-icon-detail">
-                    <i class="nc-icon nc-air-baloon"></i>
-                    <h3>Story</h3>
+                    <i class="nc-icon n c-air-baloon"></i>
+                    <h3>{{ selectedWord.content }}</h3>
                   </div>
                 </div>
 
@@ -40,8 +40,8 @@
                   <div class="footer">
                     <hr>
                     <div class="stats">
-                      <i class="fa fa-spinner"></i> A2
-                      <i class="fa fa-home"></i> English origin
+                      <i class="fa fa-spinner"></i> {{ selectedWord.metaData.level }}
+                      <i class="fa fa-home"></i> {{ selectedWord.metaData.origin }}
                     </div>
                   </div>
                 </card>
@@ -49,23 +49,38 @@
             </div>
           </card>
         </div>
-
+        <router-view :key="$route.path"></router-view>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Card from 'src/components/Cards/Card.vue'
+import Card from 'src/components/Cards/Card.vue';
+import StaticData from 'src/components/Data/StaticData.vue'
 
 export default {
   components: {
-    Card
+    Card,
+    StaticData
+  },
+
+  data() {
+    return {}
   },
   props: {
-    word: Object
+    content: {
+      type: String,
+      required: true
+    }
   },
   created: function () {
-    console.log('the word is: ' + this.word);
+
+  },
+  computed: {
+    selectedWord() {
+      return StaticData.words.find(item => item.content === this.content);
+    }
+
   }
 }
 

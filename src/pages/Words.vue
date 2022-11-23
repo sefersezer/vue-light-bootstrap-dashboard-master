@@ -13,7 +13,7 @@
                 <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6" v-for="word in words">
                   <div class="font-icon-detail">
                     <i class="nc-icon nc-air-baloon"></i>
-                    <h4 :word="word">{{ word.content }}</h4>
+                    <router-link :to="{ name: 'SearchResult', params: { content: word.content  } }">{{ word.content }}</router-link>
                   </div>
                 </div>
               </div>
@@ -41,8 +41,12 @@ export default {
   },
   data() {
     return {
-      words: null
+      words: null,
+      selectedWord: null
     }
+  },
+  methods: {
+    
   }
 }
 

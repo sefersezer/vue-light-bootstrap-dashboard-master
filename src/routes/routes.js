@@ -2,7 +2,7 @@ import DashboardLayout from '../layout/DashboardLayout.vue'
 // GeneralViews
 import NotFound from '../pages/NotFoundPage.vue'
 
-// Admin pages
+// public pages
 import OverviewOld from 'src/pages/OverviewOld.vue'
 import Overview from 'src/pages/Overview.vue'
 import Words from 'src/pages/Words.vue'
@@ -12,6 +12,7 @@ import TechnicalBackground from 'src/pages/TechnicalBackground.vue'
 import Experiences from 'src/pages/Experiences.vue'
 import SearchResult from 'src/pages/SearchResult.vue'
 
+// Admin pages
 import UserProfile from 'src/pages/UserProfile.vue'
 import TableList from 'src/pages/TableList.vue'
 import Typography from 'src/pages/Typography.vue'
@@ -26,41 +27,49 @@ const routes = [
     path: '/',
     component: DashboardLayout,
     redirect: '/overview',
+    props: true,
     children: [
       {
         path: 'overview',
         name: 'Overview',
-        component: Overview
+        component: Overview,
+        props: true,
       },
       {
         path: 'words',
         name: 'Words',
-        component: Words
+        component: Words,
+        props: true,
       },
       {
         path: 'time-definitions',
         name: 'Time Definitions',
-        component: TimeDefinitions
+        component: TimeDefinitions,
+        props: true,
       },
       {
         path: 'who-am-i',
         name: 'Who am I?',
-        component: WhoAmI
+        component: WhoAmI,
+        props: true,
       },
       {
         path: 'technical-background',
         name: 'Technical Background',
-        component: TechnicalBackground
+        component: TechnicalBackground,
+        props: true,
       },
       {
         path: 'experiences',
         name: 'Experiences',
-        component: Experiences
+        component: Experiences,
+        props: true,
       },
       {
-        path: 'search-result',
+        path: 'search-result/:content',
         name: 'SearchResult',
-        component: SearchResult
+        component: SearchResult,
+        props: true,
       }
 
     ]
@@ -69,50 +78,63 @@ const routes = [
     path: '/admin',
     component: DashboardLayout,
     redirect: '/admin/overview-old',
+    props: true,
     children: [
       {
         path: 'overview-old',
         name: 'Overview Old',
-        component: OverviewOld
+        component: OverviewOld,
+        props: true,
       },
       {
         path: 'user',
         name: 'User',
-        component: UserProfile
+        component: UserProfile,
+        props: true,
       },
       {
         path: 'table-list',
         name: 'Table List',
-        component: TableList
+        component: TableList,
+        props: true,
       },
       {
         path: 'typography',
         name: 'Typography',
-        component: Typography
+        component: Typography,
+        props: true,
       },
       {
         path: 'icons',
         name: 'Icons',
-        component: Icons
+        component: Icons,
+        props: true,
       },
       {
         path: 'maps',
         name: 'Maps',
-        component: Maps
+        component: Maps,
+        props: true,
       },
       {
         path: 'notifications',
         name: 'Notifications',
-        component: Notifications
+        component: Notifications,
+        props: true,
       },
       {
         path: 'upgrade',
         name: 'Upgrade to PRO',
-        component: Upgrade
+        component: Upgrade,
+        props: true,
       }
     ]
   },
-  { path: '*', component: NotFound }
+  {
+    path: '*',
+    props: true,
+    component: NotFound
+  }
 ]
 
 /**
