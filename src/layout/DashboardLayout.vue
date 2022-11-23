@@ -14,8 +14,10 @@
         <i class="nc-icon nc-time-alarm"></i>
         <p>Time Definitions</p>
       </sidebar-link>
-
-
+      <sidebar-link to="/#">
+        <i class="nc-icon nc-grid-45"></i>
+        <p>&nbsp;</p>
+      </sidebar-link>
       <sidebar-link to="/admin/overview-old">
         <i class="nc-icon nc-chart-pie-35"></i>
         <p>Dashboard</p>
@@ -44,6 +46,10 @@
         <i class="nc-icon nc-bell-55"></i>
         <p>Notifications</p>
       </sidebar-link>
+      <sidebar-link to="/admin/upgrade">
+        <i class="nc-icon nc-alien-33"></i>
+        <p>Upgrade to PRO</p>
+      </sidebar-link>
 
       <template slot="bottom-links">
         <sidebar-link to="/who-am-i">
@@ -58,10 +64,7 @@
           <i class="nc-icon nc-paper-2"></i>
           <p>Experiences</p>
         </sidebar-link>
-        <sidebar-link class="active" to="/admin/upgrade">
-          <i class="nc-icon nc-alien-33"></i>
-          <p>Upgrade to PRO</p>
-        </sidebar-link>
+
 
       </template>
     </side-bar>

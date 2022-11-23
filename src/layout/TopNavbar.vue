@@ -15,25 +15,15 @@
               <i class="nc-icon nc-chart-bar-32"></i>
             </a>
           </li>
-          <!--
-            <base-dropdown tag="li">
-            <template slot="title">
-              <i class="nc-icon nc-planet"></i>
-              <b class="caret"></b>
-              <span class="notification">5</span>
-            </template>
-            <a class="dropdown-item" href="#">Notification 1</a>
-            <a class="dropdown-item" href="#">Notification 2</a>
-            <a class="dropdown-item" href="#">Notification 3</a>
-            <a class="dropdown-item" href="#">Notification 4</a>
-            <a class="dropdown-item" href="#">Another notification</a>
-          </base-dropdown>
-          -->
+
           <li class="nav-item">
-            <a href="#/search-result" class="nav-link">
-              <i class="nc-icon nc-zoom-split"></i>
-              <span class="d-lg-block">&nbsp;Search</span>
-            </a>
+            <form @submit="searchSubmit">
+              <div class="form-group">
+                <input type="text" class="form-control" id="searchInput" aria-describedby="searchHelp"
+                  v-model="searchInput" placeholder="Search a word">
+                <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
+              </div>
+            </form>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -42,31 +32,19 @@
               Who Am I?
             </a>
           </li>
-          <!--
-          <base-dropdown title="Dropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something</a>
-            <div class="divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </base-dropdown>
-          -->
-          <!--
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              Log out
-            </a>
-          </li>
-        -->
+
         </ul>
       </div>
     </div>
   </nav>
 </template>
 <script>
+import StaticData from 'src/components/Data/StaticData.vue';
+
 export default {
+  components: {
+    StaticData,
+  },
   computed: {
     routeName() {
       const { name } = this.$route
@@ -79,6 +57,9 @@ export default {
     }
   },
   methods: {
+    searchSubmit() {
+      this.$router.push({ name: 'SearchResult', params: { content: this.searchInput } })
+    },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },
@@ -99,5 +80,15 @@ export default {
 
 </script>
 <style>
+#searchInput {
+  width: 175px;
+  float: left;
+  margin: -10px 4px 0px 12px;
+}
 
+#searchButton {
+  float: left;
+  margin: -10px 0px 0px 0px;
+  padding: 7px;
+}
 </style>
