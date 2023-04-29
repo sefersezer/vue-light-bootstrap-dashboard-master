@@ -54,7 +54,7 @@
       <template slot="bottom-links">
         <sidebar-link to="/who-am-i">
           <i class="nc-icon nc-satisfied"></i>
-          <p>Who am I?</p>
+          <p>Who are we?</p>
         </sidebar-link>
         <sidebar-link to="/technical-background">
           <i class="nc-icon nc-settings-90"></i>

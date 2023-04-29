@@ -43,7 +43,7 @@
     props: {
       title: {
         type: String,
-        default: 'Sefer Sezer'
+        default: 'The Notebook'
       },
       backgroundColor: {
         type: String,

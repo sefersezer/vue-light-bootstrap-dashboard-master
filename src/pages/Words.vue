@@ -13,6 +13,7 @@
                 <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-6" v-for="word in words">
                   <div class="font-icon-detail">
                     <i class="nc-icon nc-air-baloon"></i>
+                    <br/>
                     <router-link :to="{ name: 'SearchResult', params: { content: word.content  } }">{{ word.content }}</router-link>
                   </div>
                 </div>

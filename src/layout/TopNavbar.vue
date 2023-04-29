@@ -29,7 +29,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#/who-am-i">
-              Who Am I?
+              Who are we?
             </a>
           </li>
 
